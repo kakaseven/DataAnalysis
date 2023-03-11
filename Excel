@@ -1,0 +1,2 @@
+import xlwings as xw
+xlapp = xw.App(visible=True, add_book=False)
