@@ -21,3 +21,4 @@ def linear_loss(X, y, w, b):
     # 线性回归预测值
     y_hat = np.dot(X, w) + b
     # 计算预测值与实际标签之间的均方损失
+    test
