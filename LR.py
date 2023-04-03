@@ -21,4 +21,9 @@ def linear_loss(X, y, w, b):
     # 线性回归预测值
     y_hat = np.dot(X, w) + b
     # 计算预测值与实际标签之间的均方损失
-    test
+    loss = np.sum((y_hat-y)**2) / num_train
+    # 基于均方损失对权重系数的一阶梯度
+    dw = np.dot(X.T, (y_hat-y))/ num_train
+    # 基于均方损失对偏置的一阶梯度
+    db = np.sum((y_hat - y)) / num_train
+    return y_hat, loss, dw, db
